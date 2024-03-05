@@ -23,6 +23,7 @@ func Generator(ctx context.Context, ch chan<- int64, fn func(int64)) {
 		default:
 			ch <- i
 			fn(i)
+			i++
 		}
 	}
 }
